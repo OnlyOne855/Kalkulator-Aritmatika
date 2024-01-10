@@ -1,7 +1,6 @@
 org 100h
 jmp start       
 
-
 msg_start:  db      0dh,0ah,"===========================================================$",0dh,0ah,
 msg0:       db      0dh,0ah,"==========SELAMAT DATANG DI KALKULATOR ARITMATIKA==========$",0dh,0ah,
 msg1:       db      0dh,0ah,"===========================================================",0dh,0ah,'$'
@@ -13,7 +12,6 @@ msg4:       db      0dh,0ah,"Kesalahan dalam Pemilihan $"
 msg5:       db      0dh,0ah,"Hasil : $" 
 msg6:       db      0dh,0ah ,"TerimaKasih telah menggunakan Kalkultor Aritmatika ini $", 
 msg7:       db      0dh,0ah ,"Tekan ENTER untuk keluar dari kalkulator... $"
-
 
 start:      
             mov ah,9
@@ -84,8 +82,6 @@ InputNo:
             push ax  
             inc cx   
             jmp InputNo           
-   
-
 
 FormNo:     
             pop ax  
@@ -102,8 +98,7 @@ FormNo:
             dec cx
             cmp cx,0
             jne FormNo
-            ret   
-       
+            ret          
        
 View:       mov ax,dx
             mov dx,0
@@ -120,7 +115,6 @@ View:       mov ax,dx
             jne View
             ret
 
-
 ViewNo:     push ax 
             push dx 
             mov dx,ax 
@@ -130,7 +124,6 @@ ViewNo:     push ax
             pop dx  
             pop ax
             ret
-
                        
 Perkalian:   
             mov ah,9
